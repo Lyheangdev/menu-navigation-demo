@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   compatibilityDate: '2026-02-05',
   routeRules: {
-    '/': {
+    '/**': {
       isr: 60 // I choose to revalidate this data in every 1 minutes
     }
   },
