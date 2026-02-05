@@ -41,7 +41,7 @@ const iconMap: Record<Icon, Component> = {
 
         <Transition>
             <div v-if="isOpen"
-                class="flex flex-col mt-1 space-y-1.5 absolute top-full -right-2 border shadow border-gray-200/80 w-84 z-40! bg-white/20 p-1.5 backdrop-blur-2xl rounded-3xl">
+                class="flex flex-col mt-1 space-y-1.5 absolute top-full -right-2 border shadow border-gray-200/80 w-72 sm:w-84 z-40! bg-white/20 p-1.5 backdrop-blur-2xl rounded-3xl">
                 <div v-for="item in props.menuItems ?? []">
                     <NuxtLink :to="item.href"
                         class="group flex items-center space-x-2 py-2.5 rounded-full px-5 hover:bg-secondary duration-300 transition-colors bg-secondary/5">

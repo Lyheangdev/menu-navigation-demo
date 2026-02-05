@@ -56,7 +56,7 @@ const props = defineProps<{ isRegister?: boolean; menuResponse?: MenuResponse }>
                         <!-- Show only screen lower than 1280 -->
                         <div class="xl:hidden ml-auto max-sm:px-4 flex items-center space-x-2">
                             <LanguageSwitcher mode="mobile" class="sm:hidden" />
-                            <MobileMenuDrawer :top-menu="menuResponse?.topMenu || []"
+                            <MobileMenuDrawer :is-register="props.isRegister" :top-menu="menuResponse?.topMenu || []"
                                 :bottom-menu="menuResponse?.bottomMenu ?? []" :profile="menuResponse?.profile ?? []" />
                         </div>
                     </div>

@@ -35,9 +35,9 @@ const { isOpen, handleOpen, handleClose } = useToggleManager()
                     </div>
 
                     <div :hidden="!props.isRegister"
-                        class="sm:hidden py-1 px-0.5 bg-secondary rounded-full flex items-center space-x-2 justify-between mb-3">
+                        class="sm:hidden py-1 px-0.5 bg-secondary rounded-full flex items-center space-x-1.5 justify-between mb-3">
                         <TopUpDropDown />
-                        <div class="flex items-center space-x-5">
+                        <div class="flex items-center space-x-2.5">
                             <NotificationBadge />
                             <MailBadge />
                             <MenuIcon icon="calendar" class="text-primary size-7" />
