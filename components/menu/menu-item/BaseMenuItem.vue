@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { MenuItem } from '@/types/menu'
-import MenuIcon from '../MenuIcon.vue';
+import ImageIcon from '../ImageIcon.vue';
 
 const props = defineProps<{ menuItem: MenuItem }>();
 
@@ -34,7 +34,7 @@ function handleMouseLeave() {
                 <div v-for="sub in props.menuItem.children ?? []" :key="sub.id">
                     <NuxtLink :to="sub.href"
                         class="hover:bg-primary hover:text-secondary duration-300 transition-colors flex items-center space-x-1.5 p-1 rounded-full bg-secondary/10 w-full">
-                        <MenuIcon :icon="sub.icon ?? 'message'" class="size-5" />
+                        <ImageIcon :icon="sub.icon ?? 'soccer'" class="size-5" />
                         <span class="text-sm text-secondary">{{ sub.label }}</span>
                     </NuxtLink>
                 </div>

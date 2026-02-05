@@ -11,6 +11,7 @@ import TopUpDropDown from './TopUpDropDown.vue';
 import XIcon from '../Icon/XIcon.vue';
 import MenuIcon from './MenuIcon.vue';
 import RegisterMenuButtons from './RegisterMenuButtons.vue';
+import ImageIcon from './ImageIcon.vue';
 
 const props = defineProps<{ isRegister?: boolean; topMenu: MenuItem[]; bottomMenu: MenuItem[]; profile: MenuItem[] }>();
 
@@ -58,7 +59,7 @@ const { isOpen, handleOpen, handleClose } = useToggleManager()
                                         <NuxtLink v-for="subMenu in parentMenu.children ?? []" :key="subMenu.id"
                                             :to="subMenu.href"
                                             class="flex items-center space-x-2 bg-primary/10 p-2 rounded-full">
-                                            <MenuIcon :icon="subMenu.icon ?? 'soccer'" />
+                                            <ImageIcon :icon="subMenu.icon ?? 'soccer'" />
                                             <span> {{ subMenu.label }}</span>
                                         </NuxtLink>
                                     </div>
