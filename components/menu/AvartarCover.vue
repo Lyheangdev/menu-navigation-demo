@@ -2,7 +2,6 @@
 import type { MenuItem } from '~/types/menu';
 
 import { useToggleManager } from '~/composable/toggleManager';
-import AvatarCoverIcon from '../Icon/AvatarCoverIcon.vue';
 import UserIcon from '../Icon/UserIcon.vue';
 import ExitIcon from '../Icon/ExitIcon.vue';
 import HomeIcon from '../Icon/HomeIcon.vue';
@@ -29,10 +28,16 @@ const iconMap: Record<Icon, Component> = {
 
 <template>
     <div role="button" class="relative" @click="handleToggle" @mouseenter="handleOpen" @mouseleave="handleClose">
-        <AvatarCoverIcon class="size-10 scale-110" />
+         <NuxtImg src="/images/profile.png" alt="Logo" class="size-10 object-cover" />
         <div
             class="absolute cursor-pointer rounded-full size-6 -translate-x-1/2 -translate-y-1/2 bg-white top-1/2 left-1/2 right-0 bottom-0 justify-center items-center text-sm text-black text-center">
             AF</div>
+
+        <div
+            class="flex justify-center items-center font-bold text-[10px] bg-secondary text-primary rounded-full absolute -bottom-0.5 -right-1">
+            <NuxtImg src="/images/profile-badge.png" alt="Logo" class="size-5 object-cover" />
+            <span class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2">20</span>
+        </div>
 
         <Transition>
             <div v-if="isOpen"
