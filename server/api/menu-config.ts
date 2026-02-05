@@ -1,6 +1,6 @@
 import { MenuItem } from "~/types/menu"
 
-interface MenuResponse {
+export interface MenuResponse {
     topMenu: MenuItem[];
     bottomMenu: MenuItem[];
     profile: MenuItem[];
@@ -12,7 +12,7 @@ const data: { topMenu: MenuItem[], bottomMenu: MenuItem[], profile: MenuItem[], 
         {
             id: 1,
             label: "lịch trực tiếp",
-            href: "lịch trực tiếp",
+            href: "#",
             icon: null,
             children: [
                 { id: 11, label: "BÓNG ĐÁ", href: "#", icon: "soccer" },
@@ -25,7 +25,7 @@ const data: { topMenu: MenuItem[], bottomMenu: MenuItem[], profile: MenuItem[], 
         {
             id: 2,
             label: "lịch thi đấu",
-            href: "lịch thi đấu",
+            href: "#",
             icon: null,
             children: [
                 { id: 12, label: "BÓNG ĐÁ", href: "#", icon: "soccer" },
@@ -38,7 +38,7 @@ const data: { topMenu: MenuItem[], bottomMenu: MenuItem[], profile: MenuItem[], 
         {
             id: 3,
             label: "tỷ lệ kèo",
-            href: "tỷ lệ kèo",
+            href: "#",
             icon: null,
             children: [
                 { id: 13, label: "BÓNG ĐÁ", href: "#", icon: "soccer" },
@@ -51,7 +51,7 @@ const data: { topMenu: MenuItem[], bottomMenu: MenuItem[], profile: MenuItem[], 
         {
             id: 4,
             label: "kết quả",
-            href: "kết quả",
+            href: "#",
             icon: null,
             children: [
                 { id: 14, label: "BÓNG ĐÁ", href: "#", icon: "soccer" },
@@ -64,7 +64,7 @@ const data: { topMenu: MenuItem[], bottomMenu: MenuItem[], profile: MenuItem[], 
         {
             id: 5,
             label: "phòng chat",
-            href: "phòng chat",
+            href: "#",
             icon: null,
             children: [
                 { id: 15, label: "BÓNG ĐÁ", href: "#", icon: "soccer" },
@@ -77,7 +77,7 @@ const data: { topMenu: MenuItem[], bottomMenu: MenuItem[], profile: MenuItem[], 
         {
             id: 6,
             label: "tin tức",
-            href: "tin tức",
+            href: "#",
             icon: null,
             children: [
                 { id: 16, label: "BÓNG ĐÁ", href: "#", icon: "soccer" },

@@ -20,5 +20,5 @@ const selectedImage = computed(() => imageMap[(props.icon) as Icon]);
 
 </script>
 <template>
-    <NuxtImg :src="selectedImage" alt="Logo" class="size-6 object-cover" />
+    <img :src="selectedImage" alt="Logo" class="size-6 object-cover" />
 </template>
