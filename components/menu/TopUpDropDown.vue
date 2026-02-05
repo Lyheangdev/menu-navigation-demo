@@ -1,11 +1,9 @@
 <script setup lang="ts">
-import { ref, reactive, computed } from 'vue'
+import { ref, computed } from 'vue'
 
 import PlusIcon from '../Icon/PlusIcon.vue';
-import TopUpGoldIcon from '../Icon/TopUpGoldIcon.vue';
-import TopUpKingIcon from '../Icon/TopUpKingIcon.vue';
-import TopUpSiliverIcon from '../Icon/TopUpSiliverIcon.vue';
 import XIcon from '../Icon/XIcon.vue';
+import ImageIcon from './ImageIcon.vue';
 
 const isShow = ref(false)
 function handleToggle() {
@@ -34,9 +32,7 @@ const renderList = computed(() => topUpList?.filter(x => x.id != activeTopUp.val
     <div class="relative w-36">
         <div
             class="relative px-2.5 z-50! py-1.5 rounded-full bg-white flex items-center space-x-3 justify-evenly grow mx-1">
-            <TopUpGoldIcon v-if="activeTopUp.icon == 'gold'" />
-            <TopUpSiliverIcon v-if="activeTopUp.icon == 'siliver'" />
-            <TopUpKingIcon v-if="activeTopUp.icon == 'king'" />
+            <ImageIcon :icon="activeTopUp.icon ?? 'gold'" />
 
             <span class="text-black text-sm font-bold">{{ activeTopUp.value }}</span>
 
@@ -53,10 +49,8 @@ const renderList = computed(() => topUpList?.filter(x => x.id != activeTopUp.val
             <div v-for="topUp in renderList" :key="topUp.id" class="w-full" v-show="isShow">
                 <div class="flex items-center space-x-2 px-2.5 py-1.5 w-full rounded-full bg-secondary/50"
                     @click="handleOptionSelect(topUp.id)">
-                    <TopUpGoldIcon v-if="topUp.icon == 'gold'" />
-                    <TopUpSiliverIcon v-if="topUp.icon == 'siliver'" />
-                    <TopUpKingIcon v-if="topUp.icon == 'king'" />
-                    <span class="text-sm">{{ topUp.value }}</span>
+                    <ImageIcon :icon="topUp.icon ?? 'gold'" />
+                    <span class="text-sm text-white">{{ topUp.value }}</span>
                 </div>
             </div>
 
